@@ -1,0 +1,43 @@
+.listo-loading-wrapper {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.listo-loading {
+  & > svg {
+    animation: progress-circular-rotate 1.4s linear infinite;
+    transform-origin: center center;
+    transition: all 0.525s ease-in-out;
+  }
+
+  & .listo-loading-indicator {
+    animation: progress-circular-dash 1.4s ease-in-out infinite;
+    stroke-linecap: round;
+    stroke-dasharray: 80, 200;
+    stroke-dashoffset: 0px;
+    stroke: currentColor;
+    z-index: 2;
+    transition: all 0.525s ease-in-out;
+  }
+}
+
+@keyframes progress-circular-dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0px;
+  }
+
+  50% {
+    stroke-dasharray: 100, 200;
+    stroke-dashoffset: -15px;
+  }
+  100% {
+    stroke-dasharray: 100, 200;
+    stroke-dashoffset: -125px;
+  }
+}
+
+@keyframes progress-circular-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

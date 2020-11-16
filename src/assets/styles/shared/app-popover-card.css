@@ -1,0 +1,14 @@
+.listo-popover-card {
+  @apply p-4 shadow-lg rounded;
+  background: theme(colors.card);
+  color: theme(colors.text);
+}
+
+.listo-popover-card-title {
+  @apply font-medium text-base mb-4 text-center;
+}
+
+[data-theme='dark'] .listo-popover-card {
+  @apply shadow-none;
+  background: theme(colors.cardElevated);
+}

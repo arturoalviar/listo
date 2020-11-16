@@ -1,0 +1,17 @@
+.listo-snack-wrapper {
+  &.is-info {
+    border-color: theme(colors.blue.600);
+  }
+
+  &.is-success {
+    border-color: theme(colors.green.600);
+  }
+
+  &.is-warning {
+    border-color: theme(colors.yellow.600);
+  }
+
+  &.is-error {
+    border-color: theme(colors.red.600);
+  }
+}

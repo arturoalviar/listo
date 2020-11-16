@@ -1,0 +1,18 @@
+.listo-card {
+  @apply border rounded-lg;
+  background: theme(colors.card);
+  border-color: theme(colors.cardBorder);
+
+  &.no-bg {
+    @apply border rounded-lg bg-transparent;
+    border-color: theme(colors.cardBorder);
+  }
+}
+
+.listo-card-heading {
+  @apply text-2xl font-semibold leading-tight;
+}
+
+.listo-card-title {
+  @apply text-xl font-medium leading-tight;
+}

@@ -1,0 +1,15 @@
+.listo-task-labels {
+  &.is-condensed {
+    & ul {
+      @apply mb-2 h-auto;
+
+      & li {
+        @apply p-0 h-2 w-4;
+
+        & p {
+          @apply hidden;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.listo-markdown-wrapper,
+.listo-markdown-result,
+.listo-markdown-textarea {
+  min-height: 8rem;
+}
+
+.listo-markdown-textarea {
+  &:active,
+  &:focus,
+  &:focus-within {
+    @apply outline-none;
+    min-height: 14rem;
+  }
+}

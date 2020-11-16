@@ -1,0 +1,7 @@
+.listo-panel {
+  @apply relative rounded p-4 mb-4;
+  &.is-alert {
+    background: theme(colors.dangerBg);
+    color: theme(colors.dangerText);
+  }
+}

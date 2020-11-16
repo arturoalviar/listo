@@ -1,0 +1,15 @@
+.listo-column-item-wrapper {
+  &.is-filtered {
+    @apply h-0 overflow-hidden;
+  }
+}
+
+.column-item {
+  &.is-dragging {
+    @apply border-2 border-dashed shadow-none;
+    border-color: theme(colors.cardBorder);
+    & .column-item-content {
+      @apply opacity-50;
+    }
+  }
+}

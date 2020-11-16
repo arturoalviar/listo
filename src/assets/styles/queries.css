@@ -1,0 +1,4 @@
+@custom-media --vp-min-sm (min-width: 640px);
+@custom-media --vp-min-md (min-width: 768px);
+@custom-media --vp-min-lg (min-width: 1024px);
+@custom-media --vp-min-xl (min-width: 1280px);

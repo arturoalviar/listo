@@ -1,0 +1,28 @@
+.listo-dropdown-menu-wrapper {
+  @apply bg-card absolute w-64 shadow-lg m-0 z-50;
+}
+
+.listo-dropdown-menu-divider {
+  @apply block border-b opacity-25;
+  border-color: theme(colors.text);
+}
+
+.listo-dropdown-menu-item {
+  @apply w-full flex flex-row items-center p-2 cursor-pointer;
+
+  &:hover {
+    background: theme(colors.input);
+  }
+}
+
+.listo-dropdown-menu-item-icon {
+  @apply mr-4;
+
+  & svg {
+    @apply w-auto h-4;
+  }
+}
+
+.listo-dropdown-menu-item-content {
+  @apply inline-flex flex-grow font-medium text-sm leading-none;
+}

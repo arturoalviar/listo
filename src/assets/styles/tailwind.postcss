@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*! purgecss start ignore */
+:root,
+[data-theme='light'] {
+  /* text colors */
+  --color-heading: theme(colors.gray.900);
+  --color-text-darker: theme(colors.gray.900);
+  --color-text-dark: theme(colors.gray.800);
+  --color-text: theme(colors.gray.700);
+  --color-text-light: theme(colors.gray.600);
+  --color-text-lighter: theme(colors.gray.500);
+
+  /* General UI */
+  --color-bg: theme(colors.gray.100);
+  --color-header: theme(colors.white);
+  --color-overlay-bg: rgba(255, 255, 255, 0.85);
+
+  /* Card UI */
+  --color-card: theme(colors.white);
+  --color-card-hover: theme(colors.gray.100);
+  --color-card-elevated: #2e2e2e;
+  --color-card-border: theme(colors.gray.200);
+  --color-column: theme(colors.gray.100);
+
+  /* App Palette */
+  --color-primary: theme(colors.teal.400);
+  --color-primary-bg: theme(colors.teal.400);
+  --color-primary-hover: theme(colors.teal.500);
+  --color-primary-text: theme(colors.teal.100);
+  --color-success-bg: theme(colors.green.300);
+  --color-success-hover: theme(colors.green.400);
+  --color-success-text: theme(colors.green.700);
+  --color-danger-bg: theme(colors.red.300);
+  --color-danger-hover: theme(colors.red.400);
+  --color-danger-text: theme(colors.red.700);
+
+  /* Inputs */
+  --color-input: theme(colors.gray.200);
+  --color-placeholder: theme(colors.gray.500);
+  --button-default: theme(colors.gray.200);
+  --button-default-hover: theme(colors.gray.300);
+}
+
+[data-theme='dark'] {
+  --color-heading: theme(colors.white);
+  --color-text-darker: theme(colors.gray.400);
+  --color-text-dark: theme(colors.gray.300);
+  --color-text: theme(colors.gray.200);
+  --color-text-light: theme(colors.gray.100);
+  --color-text-lighter: theme(colors.white);
+
+  --color-bg: #0d0d0d;
+  --color-header: #080808;
+  --color-overlay-bg: rgba(46, 46, 46, 0.65);
+
+  --color-card: #141414;
+  --color-card-hover: #2e2e2e;
+  --color-card-border: #1f1f1f;
+  --color-column: #1f1f1f;
+
+  --color-primary: theme(colors.teal.700);
+  --color-primary-bg: theme(colors.teal.700);
+  --color-primary-hover: theme(colors.teal.800);
+  --color-primary-text: theme(colors.teal.200);
+  --color-success-bg: theme(colors.green.700);
+  --color-success-hover: theme(colors.green.800);
+  --color-success-text: theme(colors.green.200);
+  --color-danger-bg: theme(colors.red.700);
+  --color-danger-hover: theme(colors.red.800);
+  --color-danger-text: theme(colors.red.200);
+
+  --color-input: #1f1f1f;
+  --color-placeholder: theme(colors.gray.200);
+  --button-default: #1f1f1f;
+  --button-default-hover: #1a1a1a;
+}
+
+[data-theme='sakura'] {
+  --color-heading: #30110d;
+  --color-text-darker: #30110d;
+  --color-text-dark: #561c15;
+  --color-text: #642216;
+  --color-text-light: #ed7973;
+  --color-text-lighter: #ed7877;
+
+  --color-bg: #f9dbcf;
+  --color-header: #f3cdbe;
+  --color-overlay-bg: rgba(243, 205, 190, 0.85);
+
+  --color-card: #f7e2db;
+  --color-card-hover: #e6bca7;
+  --color-card-border: #ecc5b6;
+  --color-column: #f7e2db;
+
+  --color-primary: #eb9593;
+  --color-primary-bg: #eb9593;
+  --color-primary-text: #541b14;
+  --color-primary-hover: #ed7877;
+
+  --color-input: #ecc5b6;
+  --color-placeholder: #9a2819;
+  --button-default: #ecc5b6;
+  --button-default-hover: #e6bca7;
+}
+/*! purgecss end ignore */
+
+@layer base {
+  html {
+    @apply font-body;
+  }
+}
+
+@layer utilities {
+  .bg-bg {
+    background-color: theme(colors.bg);
+  }
+
+  .bg-header {
+    background-color: theme(colors.header);
+  }
+
+  .bg-card {
+    background-color: theme(colors.card);
+  }
+
+  .bg-input {
+    background-color: theme(colors.input);
+  }
+
+  .border-primary {
+    border-color: theme(colors.primary);
+  }
+
+  .border-card {
+    border-color: theme(colors.cardBorder);
+  }
+
+  .border-input {
+    border-color: theme(colors.input);
+  }
+
+  .transition-primary {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  @variants hover, focus {
+    .bg-cardHover {
+      background-color: theme(colors.cardHover);
+    }
+
+    .bg-input {
+      background-color: theme(colors.input);
+    }
+
+    .text-placeholder {
+      color: theme(colors.placeholder);
+    }
+  }
+}

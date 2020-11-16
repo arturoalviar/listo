@@ -1,0 +1,38 @@
+.task-bg {
+  background: theme(colors.overlayBg);
+  min-height: 100vh;
+}
+
+.task-card {
+  width: 90%;
+  max-width: 1400px;
+}
+
+.task-title {
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-within {
+    @apply border-current;
+  }
+}
+
+.task-meta {
+  color: theme(colors.textLight);
+}
+
+.task-card-body {
+  @media (--vp-min-md) {
+    grid-template-columns: 1fr 250px;
+  }
+}
+
+.task-card-controls {
+  @media (--vp-min-md) {
+    width: 250px;
+  }
+
+  & .listo-button {
+    @apply w-full;
+  }
+}

@@ -1,0 +1,34 @@
+.listo-checklist-item {
+  @apply items-start;
+  &:hover {
+    & .listo-checklist-item-controls {
+      @apply opacity-100;
+    }
+  }
+}
+
+.listo-checklist-label-wrapper {
+  @apply items-start;
+  &:hover .listo-checklist-item-controls {
+    @apply opacity-100;
+  }
+
+  & .listo-input-label.checklist-label {
+    @apply px-3 font-normal cursor-text;
+  }
+
+  & .listo-input-label.checklist-label,
+  & .listo-text-input.checklist-input {
+    @apply mb-0 leading-loose;
+    min-height: 2rem;
+    white-space: pre-wrap;
+  }
+
+  & .listo-text-input.checklist-input {
+    @apply overflow-hidden break-words resize-none py-0;
+  }
+
+  & .listo-input-label.checklist-label {
+    min-height: 2rem;
+  }
+}

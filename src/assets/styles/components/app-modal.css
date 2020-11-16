@@ -1,0 +1,13 @@
+.listo-modal-wrapper {
+  background: theme(colors.overlayBg);
+
+  &.is-top {
+    @apply justify-start pt-10;
+  }
+
+  &.no-bg {
+    & .listo-modal {
+      @apply bg-transparent shadow-none pt-12 px-4;
+    }
+  }
+}

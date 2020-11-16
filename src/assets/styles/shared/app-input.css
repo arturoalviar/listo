@@ -1,0 +1,68 @@
+.listo-text-input {
+  @apply block border border-transparent appearance-none rounded w-full py-2 px-3 mb-3 text-sm leading-tight;
+  background-color: theme(colors.input);
+
+  &:focus {
+    @apply outline-none;
+  }
+
+  &::placeholder {
+    color: theme(colors.placeholder);
+  }
+}
+
+.listo-outline-input {
+  @apply relative bg-transparent border border-transparent;
+
+  &::placeholder {
+    color: theme(colors.placeholder);
+  }
+
+  &:focus {
+    @apply outline-none;
+  }
+
+  &:hover {
+    @apply border-current;
+  }
+}
+
+.listo-input-label {
+  @apply block w-full text-sm font-medium mb-2 leading-tight;
+}
+
+.listo-checkbox-item {
+  @apply relative flex flex-row items-center py-2 w-full;
+
+  & label {
+    @apply cursor-pointer relative flex flex-row items-center w-full;
+  }
+}
+
+.listo-checkbox-wrapper {
+  @apply relative w-8 h-8 mr-2 flex flex-col justify-center cursor-pointer;
+
+  & input {
+    @apply absolute top-0 left-0 right-0 bottom-0 w-full h-full opacity-0 z-10 cursor-pointer;
+
+    &:checked ~ .listo-checkbox {
+      @apply opacity-100;
+      border-color: theme(colors.primaryBg);
+      background: theme(colors.primaryBg);
+
+      & svg {
+        @apply opacity-100;
+      }
+    }
+  }
+}
+
+.listo-checkbox {
+  @apply flex flex-col items-center justify-center w-6 h-6 border border-current rounded-full transition-all duration-300 ease-in-out;
+  padding: 4px;
+
+  & svg {
+    @apply opacity-0 transition-opacity duration-300 ease-in-out;
+    stroke: theme(colors.card);
+  }
+}

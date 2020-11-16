@@ -1,0 +1,263 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/AppUploadData",
+  "definitions": {
+    "AppUploadData": {
+      "type": "object",
+      "properties": {
+        "boards": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "createdAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "isMenuOpen": {
+                "type": "boolean"
+              },
+              "isFavorite": {
+                "type": "boolean"
+              },
+              "columns": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "labels": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "button": {
+                      "type": "string"
+                    },
+                    "textColor": {
+                      "type": "string"
+                    },
+                    "color": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "name",
+                    "button",
+                    "textColor",
+                    "color"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "createdAt",
+              "isMenuOpen",
+              "isFavorite",
+              "columns",
+              "labels"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "columns": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "boardId": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "tasks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "taskId": {
+                      "type": "string"
+                    },
+                    "isVisible": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "taskId",
+                    "isVisible"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "id",
+              "boardId",
+              "name",
+              "tasks"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "checklists": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "taskId": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "showCompleted": {
+                "type": "boolean"
+              },
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "label": {
+                      "type": "string"
+                    },
+                    "completed": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "label",
+                    "completed"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "id",
+              "taskId",
+              "name",
+              "showCompleted",
+              "items"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "tasks": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "boardId": {
+                "type": "string"
+              },
+              "columnId": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "checklists": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "labels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "id",
+              "boardId",
+              "columnId",
+              "name",
+              "description",
+              "checklists",
+              "labels"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "spaces": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "createdAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "boards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "createdAt",
+              "boards"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "favBoards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "boards",
+        "columns",
+        "checklists",
+        "tasks",
+        "spaces",
+        "favBoards"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

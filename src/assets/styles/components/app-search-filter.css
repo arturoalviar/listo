@@ -1,0 +1,19 @@
+.listo-searchbar {
+  @apply bg-input flex flex-grow px-4 py-2 h-10 w-full;
+
+  &:active,
+  &:focus,
+  &:focus-within {
+    @apply outline-none;
+  }
+}
+
+.listo-searchbar-icon {
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.2s ease;
+
+  &.is-visible {
+    @apply opacity-100;
+  }
+}

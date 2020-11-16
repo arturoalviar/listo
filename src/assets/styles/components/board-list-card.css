@@ -1,0 +1,17 @@
+.board-list-card {
+  &:not(:last-of-type) {
+    @apply mb-6;
+    @media (--vp-min-md) {
+      @apply mb-0;
+    }
+  }
+}
+
+.listo-card-title {
+  max-height: 80px;
+}
+
+.board-list-fav-toggle {
+  top: 50%;
+  transform: translateY(-50%);
+}

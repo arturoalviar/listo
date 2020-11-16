@@ -1,0 +1,32 @@
+.listo-settings-panel {
+  @apply bg-card relative p-4 border border-card rounded-lg;
+  @media (--vp-min-lg) {
+    @apply p-8;
+  }
+}
+
+.listo-settings-panel-header {
+  @apply relative py-2 border-b border-card mb-4;
+}
+
+.listo-settings-view-wrapper {
+  @apply grid gap-10 mt-4 px-4;
+  @media (--vp-min-lg) {
+    @apply px-8;
+    grid-template-columns: 250px 1fr;
+  }
+}
+
+.listo-settings-nav {
+  & li {
+    &:not(:last-of-type) {
+      @apply border-b;
+    }
+  }
+  & a {
+    &.router-link-active {
+      @apply opacity-100;
+      background: theme(colors.cardBorder);
+    }
+  }
+}

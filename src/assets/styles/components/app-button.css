@@ -1,0 +1,62 @@
+@layer components {
+  .listo-button {
+    @apply inline-flex justify-center content-center text-sm font-medium py-2 px-2 rounded transition-all duration-300 ease-in-out;
+
+    @media (--vp-min-lg) {
+      @apply px-4;
+    }
+
+    & svg {
+      @apply inline-flex self-center mr-2 h-4 w-4;
+    }
+
+    &:focus {
+      @apply outline-none;
+    }
+
+    &.is-text {
+      background: transparent;
+      color: theme(colors.text);
+    }
+
+    &.is-full {
+      @apply inline-flex w-full;
+    }
+
+    &.is-default {
+      background: theme(colors.buttonDefault);
+      color: theme(colors.text);
+
+      &:hover {
+        background: theme(colors.buttonDefaultHover);
+      }
+    }
+
+    &.is-primary {
+      background: theme(colors.primaryBg);
+      color: theme(colors.primaryText);
+
+      &:hover {
+        background: theme(colors.primaryHover);
+      }
+    }
+
+    &.is-success {
+      background: theme(colors.successBg);
+      color: theme(colors.successText);
+
+      &:hover {
+        background: theme(colors.successHover);
+      }
+    }
+
+    &.is-danger {
+      background: theme(colors.dangerBg);
+      color: theme(colors.dangerText);
+
+      &:hover {
+        background: theme(colors.dangerHover);
+      }
+    }
+  }
+}

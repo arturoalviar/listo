@@ -1,0 +1,21 @@
+.board {
+  @apply flex flex-col flex-grow h-full relative;
+  background: theme(colors.bg);
+}
+
+.columns {
+  @apply px-2 mr-8 flex flex-row flex-grow flex-no-wrap items-start w-full overflow-x-auto overflow-y-hidden;
+  @media (--vp-min-lg) {
+    @apply px-6;
+  }
+}
+
+.column {
+  @apply flex flex-col relative mr-4 h-full;
+  flex-shrink: 0;
+  width: 352px;
+}
+
+.column-inner {
+  @apply px-4 py-3 my-3;
+}

@@ -1,0 +1,22 @@
+.listo-search-wrapper {
+  & .listo-search-container {
+    @apply flex flex-row w-full;
+  }
+
+  & .listo-searchbar {
+    @apply flex-grow border-transparent;
+  }
+}
+
+.listo-search-result {
+  &:not(:last-of-type) {
+    @apply border-b;
+  }
+}
+
+[data-theme='dark'] .listo-search-wrapper {
+  & .listo-card {
+    @apply shadow-none;
+    background: theme(colors.cardElevated);
+  }
+}

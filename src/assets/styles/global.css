@@ -1,0 +1,28 @@
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background: theme(colors.bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app-wrapper {
+  @apply flex relative h-full overflow-x-hidden;
+}
+
+#app {
+  @apply bg-bg relative grid overflow-x-hidden w-full h-full;
+  color: theme(colors.text);
+  grid: 1fr / auto 1fr 0;
+}
+
+.app-container {
+  @apply relative flex flex-col flex-grow min-w-0 min-h-0 h-full;
+}
+
+.container {
+  @apply mx-auto;
+}

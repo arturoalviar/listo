@@ -1,0 +1,9 @@
+.listo-dialog-overlay {
+  @apply flex items-center justify-center fixed top-0 left-0 right-0 bottom-0 w-full h-full z-50;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.listo-dialog {
+  @apply bg-card relative max-w-sm rounded overflow-hidden shadow-lg p-6 w-full;
+  max-width: 540px;
+}

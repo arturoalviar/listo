@@ -1,0 +1,11 @@
+.board-header {
+  grid-template-columns: 1fr 200px;
+}
+
+.board-header-menu-button {
+  flex: 1;
+}
+
+.task-bg {
+  background: rgba(0, 0, 0, 0.65);
+}

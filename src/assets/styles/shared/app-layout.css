@@ -1,0 +1,37 @@
+.listo-page-header {
+  @apply flex items-center justify-between mt-4 mb-8;
+  @media (--vp-min-lg) {
+    @apply my-8;
+  }
+}
+
+.listo-section-header {
+  @apply flex flex-row justify-between w-full mb-6;
+}
+
+.listo-page-body {
+  @apply flex flex-col items-center h-full;
+}
+
+.listo-page-body-header {
+  @apply flex items-center justify-center top-0 sticky w-full px-4 z-10;
+  @media (--vp-min-lg) {
+    @apply px-8;
+  }
+}
+
+.listo-page-body-content {
+  @apply relative flex flex-col items-center overflow-y-auto w-full px-4;
+  @media (--vp-min-lg) {
+    @apply px-8;
+  }
+}
+
+@layer components {
+  .listo-icon {
+    @apply h-4 w-4;
+    @media (--vp-min-lg) {
+      @apply w-6 h-6;
+    }
+  }
+}

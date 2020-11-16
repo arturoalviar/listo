@@ -1,0 +1,5 @@
+.listo-checklist-header {
+  &:hover .listo-checklist-options {
+    @apply opacity-100;
+  }
+}

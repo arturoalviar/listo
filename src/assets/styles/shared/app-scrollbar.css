@@ -1,0 +1,37 @@
+.listo-scrollbar {
+  /* firefox custom scrollbar */
+  scrollbar-color: theme(colors.primary) theme(colors.bg);
+  scrollbar-width: thin;
+}
+
+.listo-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: theme(colors.bg);
+}
+
+.listo-scrollbar::-webkit-scrollbar-button {
+  display: none;
+}
+
+.listo-scrollbar::-webkit-scrollbar-track {
+  background: theme(colors.bg);
+}
+
+.listo-scrollbar::-webkit-scrollbar-thumb {
+  background-color: theme(colors.primary);
+  border-radius: 10px;
+  border: 2px solid theme(colors.bg);
+}
+
+.listo-scrollbar.show-on-hover {
+  &::-webkit-scrollbar-thumb {
+    @apply transition-all duration-300 ease-in-out;
+    visibility: hidden;
+  }
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      visibility: visible;
+    }
+  }
+}

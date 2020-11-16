@@ -1,0 +1,17 @@
+.listo-labels {
+  & > ul {
+    max-width: 300px;
+
+    & > li {
+      &:last-of-type {
+        @apply justify-center px-0 h-auto;
+      }
+    }
+  }
+}
+
+.listo-label {
+  &:last-of-type button {
+    @apply font-bold w-full;
+  }
+}

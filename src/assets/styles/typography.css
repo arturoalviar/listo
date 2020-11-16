@@ -1,0 +1,39 @@
+h1 {
+  color: theme(colors.textDarker);
+}
+
+h2,
+h3 {
+  color: theme(colors.textDark);
+}
+
+.listo-page-heading {
+  @apply text-2xl font-black leading-none m-0;
+  @media (--vp-min-lg) {
+    @apply text-5xl;
+  }
+}
+
+.listo-section-heading {
+  @apply text-lg font-bold leading-tight mb-2;
+  @media (--vp-min-lg) {
+    @apply text-xl;
+  }
+}
+
+.listo-block-heading {
+  @apply text-base leading-loose mb-2;
+  @media (--vp-min-lg) {
+    @apply text-lg;
+  }
+}
+
+.listo-icon-heading {
+  @apply relative;
+
+  & svg {
+    @apply absolute left-0 -ml-6 w-4 h-4;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
